@@ -1,0 +1,12 @@
+{
+  "display_name": "Chat File Manager · 채팅 파일 관리",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "SillyGgu",
+  "version": "0.1.2",
+  "minimum_client_version": "1.19.0",
+  "auto_update": false
+}
