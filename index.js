@@ -390,15 +390,12 @@ function launch() {
     } catch (error) { globalThis.toastr?.error(error.message); }
 }
 function install() {
+    // Remove the old shortcut from the shared extension settings container.
+    document.getElementById('cfm-launch-settings')?.remove();
     const search = document.getElementById('select_chat_search');
     if (search && !document.getElementById('cfm-launch-chat')) {
         const node = button('파일 관리+', launch, 'menu_button'); node.id = 'cfm-launch-chat';
         search.parentElement.append(node);
-    }
-    const settings = document.getElementById('extensions_settings');
-    if (settings && !document.getElementById('cfm-launch-settings')) {
-        const node = button('채팅 파일 관리', launch, 'menu_button'); node.id = 'cfm-launch-settings';
-        settings.append(node);
     }
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install, { once: true }); else install();
